@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-customer',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    // atributo recebido no construtor
+    private router: Router
+    ) { }
 
   ngOnInit() {
+  }
+
+  addCustomer() {
+    // manipulacao do atributo recebido no construtor
+    // manipulacao de rotas
+    this.router.navigate(['/addcustomer']);
   }
 
 }
